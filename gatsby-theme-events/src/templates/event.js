@@ -8,8 +8,8 @@ export const query = graphql`
     event(id: { eq: $eventID }) {
       name
       url
-      startDate(formatString: "MMMM DD YYYY")
-      endDate(formatString: "MMMM DD YYYY")
+      startDate(formatString: "MMMM DD, YYYY")
+      endDate(formatString: "MMMM DD, YYYY")
       location
       slug
     }
