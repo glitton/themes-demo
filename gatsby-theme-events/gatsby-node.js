@@ -70,8 +70,10 @@ exports.createPages = async ({ actions, graphql, reporter }, options) => {
   }
 
   const events = result.data.allEvent.nodes;
+
   events.forEach((event) => {
     const slug = event.slug;
+
     actions.createPage({
       path: slug,
       component: require.resolve("./src/templates/event.js"),
@@ -79,5 +81,6 @@ exports.createPages = async ({ actions, graphql, reporter }, options) => {
         eventID: event.id,
       },
     });
+    git;
   });
 };
