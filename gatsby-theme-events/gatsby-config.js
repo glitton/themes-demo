@@ -1,9 +1,9 @@
-module.exports = ({ contentPath = "data", basePath = "/" }) => ({
+module.exports = {
   plugins: [
     {
       resolve: "gatsby-source-filesystem",
       options: {
-        path: contentPath,
+        path: "data",
       },
     },
     {
@@ -13,4 +13,4 @@ module.exports = ({ contentPath = "data", basePath = "/" }) => ({
       },
     },
   ],
-});
+};
